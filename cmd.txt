@@ -1,0 +1,34 @@
+1.docker login
+2.docker pull image-name
+3.docker images
+4.docker run image-name / docker run -d -p 80:80 image-name
+5.docker stop container-id
+6.docker rm container-id
+7.docker rmi image-name
+8.rm -V Dockerfile
+9. docker build -t name                                             //create image
+10.docker ps /docker ps -a
+11.docker logs container-id
+12.docker attach container-id                                     //browser page attach with terminal
+13.docker exec -it container-id bash                              //to exit inside the container
+14.docker run -itd image-name                                  // like ubuntu image tun always image
+15.docker network ls
+16.docker inspect network-name                               //show file direction or logs or detail
+17.docker network create name -d bridge
+18.docker run --network network-name imagename
+15.docker volume ls 
+16.docker inspect volume-name                              //show file direction or logs or detail
+17.docker volume create name
+18.docker run  -v volume-name:/var/lib/mysql mysql
+19.docker run  -v "path/dir/:/var/lib/mysql" mysql           //in windows
+20.docker run  -v path/dir:/var/lib/mysql                        //in linux
+21.docker compose up /docker compose up -d
+22.docker compose down                                             //delete compose
+23.docker compose up -d --build                                 //recreate compose
+24.docker rmi image-name
+25.docker images -aq                                                //get all image id
+26.docker rmi -f $(docker images -aq)                                 //delete all image 
+27.docker system prune                                         //delete all stop image and container
+28.docker image tag old-imagename newimagename                       //change image name
+29.docker push dockerhubname/imagename
+30.nohup docker attach container-id &                              //store log in anew file
